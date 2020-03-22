@@ -1,0 +1,53 @@
+/*Budowa styli ukąłdu strony*/
+/*1 zarys zewnętrzny*/
+#container 
+{
+width: 1000px; /* szerokość*/
+margin-left: auto;
+margin-right: auto;
+}
+#logo /*Nagłówek*/
+{
+background-color: black;
+color:white  ; /*kolor tekstu*/
+text-align: center; /*tex centralny*/
+padding:15px ; /*wypełnienei div*/
+}
+/* zasada pozycjonowania "div" 
+Do wszystkich bloków ułożonych szeregowo (obok siebie) dodać zapis w CSS: float:left;
+Do pierwszego div, który znowu ma układac się pod spodem poprzednika, dodajemy linię CSS: cler:booth 
+-jeśli by nie było div to dodajemy go:<div style="clear:both;"><div>
+*/
+/*wypełnienie div - każdego bloku*/
+#nav
+{
+float: left;
+background-color: teal;
+width: 130px;
+min-height: 600px;
+padding: 10px;
+}
+#content
+{
+float: left;
+padding: 25px;
+width:600px
+}
+#ad
+{
+float: left;
+width: 170px;
+min-height: 600px;
+padding: 15px;
+background-color: yellowgreen;
+
+}
+#footer
+{
+clear: both; /* w stopce ustawia dolne sklejenie z blokami*/
+background-color: slategrey;
+color: white;
+text-align:center;
+padding: 12px;
+
+}

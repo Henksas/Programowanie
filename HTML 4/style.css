@@ -1,0 +1,139 @@
+body
+{
+    background-color: rgba(202, 197, 202, 0.973); /*kolor tła*/
+    margin: 0px;/*margines logo*/
+    font-family: 'Open Sans', sans-serif;/*trzcionka z fonta*/
+    font-size: 20px; /*wysokość trzcionki*/
+
+}
+a:link /*link nie odwiedzony - ustalenie koloru hiperłącza (podświetlenie w spisie treści*/ 
+{
+   color: black;
+   text-decoration: none;
+}
+
+a:visited /*link  odwiedzony - ustalenie koloru hiperłącza (podświetlenie w spisie treści*/ 
+{
+   color: black;
+   text-decoration: none;
+}
+a:hover /*link po najechaniu kursorem - ustalenie koloru hiperłącza (podświetlenie w spisie treści*/ 
+{
+   color: #485b3b;
+   text-decoration: underline;
+}
+a:active /*link aktywny - ustalenie koloru hiperłącza (podświetlenie w spisie treści*/
+{
+   color: black;
+   text-decoration: none;
+}
+#logo
+{
+   width: 100%;
+   height: 50px;
+   background-color: #485b3b;
+   font-size: 36px;
+   text-align: center;
+   color: white;
+   text-transform: uppercase; /*duże litery w logo*/
+   padding:5px 0px 5px 0px;
+    /*określenie rozmiaru odległości nazwy logo wg układu współrzędnego xy licząć od góra,prawa.dół,lewa strona */
+   letter-spacing: 3px ; /* rozstrzelenei liter  w logo*/
+   border-bottom: 5px solid yellow; /*dolna linia ciągła- logo*/
+   text-shadow: /*cień textu w logo- należy przypisać jak w ukł. wspórz. 4 razy (ćwiartki)*/
+   1px 1px 0 yellow,
+   -1px 1px 0 yellow,
+   -1px -1px 0 yellow,
+    1px -1px 0 yellow; 
+}
+#container
+{
+   margin-left: auto;
+   margin-right: auto;
+   background-color: white;
+   width: 1658px;
+   padding: 20px;
+   border-left: 1px solid yellow;
+   border-right: 1px solid yellow;
+}
+.rectangle /*Stopka*/
+{
+    width: 960px;
+    margin: 20px;
+    text-align: center;/*wyśrodkowanie zawartości textu */
+}
+#spis /* stylizacja spisu treśći*/
+{
+   width: 1350px;
+   padding-left: 100px; /* stylizacja całości marginesu*/
+}
+ ol 
+{
+   margin-top: 5px;
+}
+ol > li /* stylizacja spisu treśći - tytuły numerowane (stylizujemy "li" które są w "ol"*/
+{
+   font-size: 20px;
+   text-transform: uppercase;
+   font-weight: 700;
+   padding: 5px;
+   letter-spacing: 2px;
+}
+ol > li > ul /* stylizacja spisu treśći - tytuły numerowane (stylizujemy "ul" które są w "li" które są w "ol"*/
+{
+   font-size: 16px;
+   text-transform: none;  
+   font-weight:400 ;/*grubość czcionki*/
+   padding: 0px;
+   letter-spacing: 0px;
+   margin-top: 5px;
+   margin-left: 20px;
+   list-style-type:disc ;/*kolor kropek w listach-styl domyślny 
+   ( tej chwili są 2 znaki w listach domyślna kropka i 
+   dodana jako drugi znak pacyfka zeby była tylko pacyfka należy zastąpić "disc"-"none"*/
+}
+ol > li > ul > li /*ustawienie marginesu*/
+{
+   margin: 0px;  
+   color:#485b3b; /*kolor kropek w listach*/
+}
+.cz /*1 sposób- załóż nową klasę - kolor tekstu po kropkach - po ustawieniu koloru w kropkach zostały zmienione kolory liter, 
+należ poniżej założyc dodatkowo klase do samego tekstu*/
+{
+   color: black;/*kolor kropek w listach  */
+}
+/*2 sposób na kolor kropek w listach before=przed,zanim, wcześniej niż */
+ol > li > ul > li:before 
+{
+   color: black;
+   content:"☮" ; /*2 sposób na kolor kropek w google - encje html są symbole znaki które możn pobrać i wstawić do list */
+   margin-right: 5px;
+}
+ol.chapsters /*dodatkowa klasa dla listy dodatkowej  */
+{
+   color: blue;
+}
+ /*dodane slajdy  */
+.slajd
+{
+   padding: 20px 20px;
+   text-align: justify;
+   
+}
+h1 /*opis nagłówków slajdó  */
+{
+   font-size: 24px;
+   text-transform: uppercase;
+   font-weight: 700;
+}
+.scrollup /* clasa znacznika*/
+{
+width: 64px;
+height: 64px;
+text-decoration: none;
+background: url("img/up.jpg") no-repeat 0px 0px; /*tło znacznika , w razie przekroczenia rozniaru 64x64 nie powtarzaj grafiki tła*/
+position: fixed; /*przypisanie pozycji na stałe znacznika na ekranie*/ 
+right: 50px;
+bottom: 50px; 
+display: none; /*ukrycie znacznika na 1 stronie ; pokaże sie dopiero od drugiej*/
+}

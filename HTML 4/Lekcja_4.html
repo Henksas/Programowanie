@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Suwaki na stronie </title>
+    <meta name="description" content="Przewijanie stron internetowych"/>
+    <meta name="keywords" content="materiały do ogarnięcia dla każdego"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic,latin-ext" rel="stylesheet" type="text/css"/>
+
+     <!-- ustawienie opcji przewiń do - skiopowanie ze strony darmowej googlle bibloteka jquery.scrollTo.min plik skopiować do źródłowego foldderu u mnie" Programowanie" -->
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> <!--google apps jquery - strona online -->  
+     <script src="jquery.scrollTo.min.js" ></script>
+     
+     <script> 
+     
+     jQuery(function($) // HED - W javascript JAK W HTML
+          
+     {      // BODY W javascript JAK W HTML
+        // zresetuj scrolla 
+        $.scrollTo(0); // javascript - przewiń do...
+        $('#link1').click(function() {$.scrollTo ($('#szczupak'),500); } );
+        $('#link2').click(function() {$.scrollTo ($('#karp'),500); } );
+        $('#link3').click(function() {$.scrollTo ($('#sum'),500); } );// jeśli ktoś wciśnie link 3 wywołaj funkcję
+        $('#link4').click(function() {$.scrollTo ($('#sandacz'),500); } );
+        $('#link5').click(function() {$.scrollTo ($('#tołpyga'),500); } );
+        $('#link6').click(function() {$.scrollTo ($('#wędkarstwo-morskie'),500); } );
+        $('#link7').click(function() {$.scrollTo ($('#wędkarstwo-muchowe'),500); } );
+        $('#link8').click(function() {$.scrollTo ($('#wędkarstwo-podlodowe'),500); } );
+        $('#link9').click(function() {$.scrollTo ($('#wędkarstwo spinningowe'),500); } );
+        $('#link10').click(function() {$.scrollTo ($('#wędkarstwo spławikowo-gruntowe'),500); } );
+        $('#link11').click(function() {$.scrollTo ($('#troling'),500); } );
+        $('#link12').click(function() {$.scrollTo ($('#kij'),500); } );
+        $('#link13').click(function() {$.scrollTo ($('#kołowrotek'),500); } );
+        $('#link14').click(function() {$.scrollTo ($('#podbierak'),500); } );
+        $('#link15').click(function() {$.scrollTo ($('#żyłka-plecionka'),500); } );
+        $('#link16').click(function() {$.scrollTo ($('#Słup'),500); } );
+        $('#link17').click(function() {$.scrollTo ($('#Lgiń'),500); } );
+        $('#link18').click(function() {$.scrollTo ($('#Głębokie'),500); } );
+        $('#link19').click(function() {$.scrollTo ($('#Jezioro Paklicko Wlk.'),500); } );
+        $('#link20').click(function() {$.scrollTo ($('#Wędkarz'),500); } );
+        $('#link21').click(function() {$.scrollTo ($('#Żona-wędkarza'),500); } );
+        $('#link22').click(function() {$.scrollTo ($('#Zainteresowania-wędkarza'),500); } );
+        $('#link23').click(function() {$.scrollTo ($('#Sąsiad-wędkarza'),500); } );
+        $('#link24').click(function() {$.scrollTo ($('#Teściowa-wędkarza'),500); } );
+        
+        $('.scrollup').click(function() {$.scrollTo ($('body'),1000); } );// ustawienie przewijana czas reakcji
+     }
+     );
+
+// pokaż znacznik przewijania od 2 slajdu
+        $(window).scroll(function()
+     {
+        if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+        else $('.scrollup').fadeOut();
+     }
+     );
+
+
+     </script>
+
+</head>
+<body>
+    <div id="logo">Wykład 1 - Tworzenie List !!!</div>  
+    <div id="container">
+         <a href="#" class="scrollup"></a> <!--ustawieni znacznika przewijania, skopiowany jest obraz znacznika w img -->
+         <div id="spis"> <!-- tworzenie lis <ol> lista uporządkowana (numerowana); 
+          <ul> lista nie uporządkowana (znaki, symbole)
+          <li> tagi w listach, element listy
+              zagnieżdżona lista- lista w liście klika poziomów listy-->
+             <ol>
+                 <li>
+                     Okazy
+                     <ul>
+                         <li><a id="link1" href="#">szczupak</a><span class="cz"></span></li>
+                         <!--nowa klasa "cz"- kolor tekstu po kropkach - po ustawieniu koloru w kropkach zostały zmienione kolory liter, 
+                         należ poniżej założyc dodatkowo klase do samego tekstu-->
+                         <li><a id="link2" href="#">karp</a></li>
+                         <li><a id="link3" href="#">sum</a></li> <!-- dodanie hiperłącza wyszukanie slajdu pod nazwą rybacart sum, po naciśnięciu w spisie treści sum 
+                        należy teraz wyszukać slajd z nazwą sum i dodać nazwę rybacrt w slajdzie sum- (uwaga dodajemy ale bez "#")-->
+                         <li><a id="link4" href="#">sandacz</a></li>
+                         <li><a id="link5" href="#">tołpyga</a></li>
+                     </ul>
+                 </li>
+                 <li>
+                     Technika wękarska
+                     <ul>
+                         <li><a id="link6" href="#">wędkarstwo-morskie</a><span class="cz"></span></li>
+                         <li><a id="link7" href="#">wędkarstwo-muchowe</a></li>
+                         <li><a id="link8" href="#">wędkarstwo-podlodowe</a></li>
+                         <li>wędkarstwo spinningowe</li>
+                         <li>wędkarstwo spławikowo-gruntowe</li>
+                         <li>trolling</li>
+                     </ul>  
+                 </li>
+                 <li>
+                     Sprzęt
+                     <ul>
+                         <li><a id="link12" href="#">kij</a></li>
+                         <li><a id="link13" href="#">kołowrotek</a></li>
+                         <li><a id="link14" href="#">podbierak</a></li>
+                         <li><a id="link15" href="#">żyłka-plecionka</a></li>
+                     </ul>
+                 </li>
+                 <li>
+                     Łowiska
+                     <ul>
+                         <li><a href=https://www.google.com/maps/place/Zalew+S%C5%82up/@51.0948054,16.1068184,14z/data !3m1!4b1!4m5!3m4!1s0x470f0fc2c3aac19b:0xd78a6a90e66e1f30!8m2!3d51.0972451!4d16.1275494 target="_blank" title="Zobacz - Wikipedia"> Słup</a></li>
+                         <li><a href=https://www.google.com/maps/search/Zalew+lgi%C5%84/@51.8755906,16.2409063,15.75z target="_blank" title="Zobacz - Wikipedia">Lgiń</a></li>
+                         <li><a href=https://www.google.com/maps/place/Jezioro+G%C5%82%C4%99bokie/@52.4884724,15.5179671,12z/data !4m8!1m2!2m1!1zamV6aW9ybyBHxYLEmWJva2ll!3m4!1s0x4706f3d4a49e2777:0xc6b68d1f94cfa64b!8m2!3d52.4933973!4d15.5408272 target="_blank" title="Zobacz - Wikipedia">Głębokie</a></li>
+                         <li><a href=https://www.google.com/maps/place/Jezioro+Paklicko+Wlk./@52.3323237,15.4936517,15z/data=!4m12!1m6!3m5!1s0x0:0x1e6bf5dd85fb801b!2sO%C5%9Brodek+Wypoczynkowy+%22Nowy+Dworek%22!8m2!3d52.3323237!4d15.4936517!3m4!1s0x47065f015543e675:0xdef4d3594a810fd9!8m2!3d52.3278322!4d15.4936988 target="_blank" title="Zobacz - Wikipedia">Jezioro Paklicko Wlk.</a></li>
+                     </ul>                  
+                 </li>
+                 <li>
+                     Humor
+                    <ul>
+                        <li><a id="link20" href="#">wędkarz</a></li>
+                        <li><a id="link21" href="#">Żona wędkarza</a></li>
+                        <li><a id="link22" href="#">Zainteresowania wędkarza</a></li>
+                        <li><a id="link23" href="#">Sąsiad wędkarza</a></li>
+                        <li><a id="link24" href="#">Teściowa wędkarza</a></li>
+                    </ul> 
+                 </li>
+             </ol>
+             <ol class="chapsters"> <!-- dodatkowa lista z inną clasą-->
+                 <li>OFERTA</li>
+                 <li>PROMOCJA</li>
+             </ol>
+    </div>
+          <!-- Slajdy - OKAZY -slajdy dodane inlaine w HTML - można dodać same slajdy a zrobić clasy w css-->
+        <div class="slajd">
+             <h1 id="szczupak">szczupak</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/Szczupak.jpg" alt="crt"/>
+                 </div>
+                 
+        </div>
+        <div class="slajd">
+             <h1 id="karp">karp</h1> <!-- dodane hiper łącze z nazwą rybacart - uwaga (bez "#"-->
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/karp.jpg" alt="crt"/>
+                 </div>
+        </div>
+        <div class="slajd">
+             <h1 id="sum">sum</h1> <!-- dodane hiper łącze z nazwą rybacart - uwaga (bez "#"-->
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/Sum.jpg" alt="crt"/>
+                 </div>
+        </div>
+        <div class="slajd">
+             <h1 id="sandacz">sandacz</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/Sandacz.jpg" alt="crt"/>
+                 </div>
+        </div>
+        <div class="slajd">
+             <h1 id="tołpyga">tołpyga</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/Tołpyga.jpg" alt="crt"/>
+                 </div>
+        </div>
+          <!-- Slajdy - TECHNIKA WĘDKARSKA-->
+        <div class="slajd">
+             <h1 id="wędkarstwo-morskie">wędkarstwo-morskie</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/wędkarstwo morskie.jpg" alt="crt"/>
+                 </div>
+        </div>
+        <div class="slajd">
+             <h1 id="wędkarstwo-muchowe">wędkarstwo-muchowe</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/Wędkarstwo muchowe.jpg" alt="crt"/>
+                 </div>
+        </div>
+        <div class="slajd">
+             <h1 id="wędkarstwo-podlodowe">wędkarstwo-podlodowe</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/Wędkarstwo muchowe.jpg" alt="crt"/>
+                 </div>
+        </div>
+
+         <!-- Slajdy - SPRZĘT-->
+        <div class="slajd">
+             <h1 id="kij">kij</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/kij.jpg" alt="crt"/>
+                 </div>
+        </div>
+        <div class="slajd">
+             <h1 id="kołowrotek">kołowrotek</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/kołowrotek.jpg" alt="crt"/>
+                 </div>
+        </div> 
+        <div class="slajd">
+             <h1 id="podbierak">podbierak</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/podbierak.jpg" alt="crt"/>
+                 </div>
+        </div>
+        <div class="slajd">
+             <h1 id="żyłka-plecionka">żyłka-plecionka</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/żyłka plecionka.jpg" alt="crt"/>
+                 </div>
+        </div>       
+         
+         <!-- Łowiska -->
+        
+
+         <!-- Slajdy - HUMOR-->
+        <div class="slajd">
+             <h1 id="Wędkarz">Wędkarz</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/Wędkarz.jpg" alt="crt"/>
+                 </div>
+        </div>
+        <div class="slajd">
+             <h1 id="Żona-wędkarza">Żona wędkarza</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/żona.jpg" alt="crt"/>
+                 </div>
+        </div>
+        <div class="slajd">
+             <h1 id="Zainteresowania-wędkarza">Zainteresowania wędkarza</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/On i ona.jpg" alt="crt"/>
+                 </div>
+        </div>
+             <br class="slajd">
+             <h1 id="Teściowa-wędkarza">Teściowa wędkarza</h1>
+             <br/><br/>
+             <div style="width: 1386px; background-color: aquamarine; padding: 5 px; font-weight: 700;color: blueviolet;">
+                 <img src="img/Teściowa.jpg" alt="crt"/>
+                 </div>
+         </div>
+         <br/><br/>
+         <br/><br/>
+         <br/><br/>
+         <div class="rectangle">2020 &copy;Henry-Moje Hobby.Motto: Rusz 4-kę idź na RYbY. </div><!--stopka-->    
+
+        
+</body>
+</html>

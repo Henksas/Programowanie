@@ -1,0 +1,186 @@
+body
+{
+background-color:slategray;
+color: white;
+font-family: 'Lato', sans-serif;
+font-size: 20px;
+}
+#container /*Zawartość zew. całej strony */
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rectangle
+{
+    width: 960px;
+    margin: 20px;
+    text-align: center;/*wyśrodkowanie zawartości textu */
+}
+.square
+{
+    width: 50%;
+    float: left;
+}
+#logo
+{
+    float: left;
+    font-family: 'Josefin Sans', sans-serif; /*skopiowana trzcionka z google font*/
+    font-size: 70px;/*wyskoość trzcionki */
+    width: 600px;/*szerokość*/
+    margin-top: 10 px; /*dodatkowy margines między logo a kafelkami poniżej */
+    margin-bottom: 10 px;/*dodatkowy margines między logo a kafelkami poniżej */
+    text-align: left; /* w - .rectangle został ustawiony centralny text dlatego aby logo było ustawione z lewj strony należy dodać tex z lewej  */
+}
+#zegar
+{
+    float: left;
+    font-family: 'Josefin Sans', sans-serif;/*skopiowana trzcionka z google font*/
+    font-size: 70px;/*wyskoość trzcionki */
+    margin-top: 10 px; /*dodatkowy margines między logo a kafelkami poniżej */
+    margin-bottom: 10 px;  /*dodatkowy margines między logo a kafelkami poniżej */  
+    text-align: left;/* w - .rectangle został ustawiony centralny text dlatego aby zega był ustawiony z lewej*/
+}
+.tile1 /* górne kafelki*/
+{
+    margin: 10px;/*margines */
+    width: 230px; /*szerokość kafelki */
+    height: 142px;/*fi - złota liczba 230:1,618 (230px:1,618 =142px*/
+    background-color: #3095d3;
+    float: left;
+    text-align: center; /*wysrodkowanie tex w kafelku*/
+   
+}
+
+.tile1:hover /* po najechaniu kursorem tło zmieni kolor */
+{
+background-color:#2084c2 ;/* po odjęciu z każdej cyfry i litery o 1 zmini się barwa na ciemniejszy kolor */
+}
+
+.tile2/* dolne kafelki*/
+{
+    margin: 10px;
+    width: 230px;
+    height: 142px;/*fi - złota liczba 230:1,618 (230px:1,618 =142px*/
+    background-color: #303030;
+    float: left;
+    text-align: center; /*wysrodkowanie tex w kafelku*/
+}
+
+.tile2:hover /* po najechaniu kursorem tło zmieni kolor */
+{
+background-color:#202020 ;/* po odjęciu z każdej cyfry i litery o 1 zmini się barwa na ciemniejszy kolor */
+}
+
+.tile3/* dolne kafelki*/
+{
+    margin: 10px;
+    width: 230px;
+    height: 142px;/*fi - złota liczba 230:1,618 (230px:1,618 =142px*/
+    background-color: #93c748;
+    float: left;
+    text-align: center; /*wysrodkowanie tex w kafelku*/
+}
+
+.tile3:hover /* po najechaniu kursorem tło zmieni kolor */
+{
+background-color:#82b637 ;/* po odjęciu z każdej cyfry i litery o 1 zmini się barwa na ciemniejszy kolor */
+}
+.tile4/* dolne kafelki*/
+{
+    margin: 10px;
+    width: 480px; /* pomarańczowy kafelek szerszy na całej szerokość kafelek powyżej (suma 230px *2 + 20px marginesy)*/
+    height: 142px;/*fi - złota liczba 230:1,618 (230px:1,618 =142px*/
+    background-color: #ee5a32;
+    text-align: center; /*wysrodkowanie tex w kafelku*/
+    font-size: 26px;
+}
+.tile4:hover /* po najechaniu kursorem tło zmieni kolor */
+{
+background-color:#bb4a21 ;/* po odjęciu z każdej cyfry i litery o 1 zmini się barwa na ciemniejszy kolor */
+}
+
+.tile5/* prawa strona - boczna duża kafelka*/
+{
+    margin: 10px;
+    width: 420px; /* pomarańczowy kafelek szerszy na całej szerokość kafelek powyżej (suma 230px *2 + 20px marginesy)*/
+    height: 244px;/*142px*2 =284+20px margines = 304*/
+    background-color: #303030;
+    text-align: justify; /*wysrodkowanie wyjustowanie  tex w kafelku*/
+    padding: 30px; /*w związku z dodaniem padingu należy zmienić prporcjonalnie width i height*/
+}
+
+.tile5:hover /* po najechaniu kursorem tło zmieni kolor */
+{
+background-color:#202020 ;/* po odjęciu z każdej cyfry i litery o 1 zmini się barwa na ciemniejszy kolor */
+}
+
+.yt/* dolne kafelki z prawej strony */
+{
+    margin: 10px;
+    width: 105px;
+    height: 142px;/*fi - złota liczba 230:1,618 (230px:1,618 =142px*/
+    background-color: #d94348;
+    float: left;
+}
+
+.yt:hover /* po najechaniu kursorem tło zmieni kolor */
+{
+background-color:#c83237 ;/* po odjęciu z każdej cyfry i litery o 1 zmini się barwa na ciemniejszy kolor */
+}
+
+.fb/* dolne kafelki z prawej strony */
+{
+    margin: 10px;
+    width: 105px;
+    height: 142px;/*fi - złota liczba 230:1,618 (230px:1,618 =142px*/
+    background-color: #4668b3;
+    float: left;
+}
+.fb:hover /* po najechaniu kursorem tło zmieni kolor */
+{
+background-color:#3557a2 ;/* po odjęciu z każdej cyfry i litery o 1 zmini się barwa na ciemniejszy kolor */
+}
+
+.gplus/* dolne kafelki z prawej strony */
+{
+    margin: 10px;
+    width: 105px;
+    height: 142px;/*fi - złota liczba 230:1,618 (230px:1,618 =142px*/
+    background-color: #d95333;
+    float: left;
+}
+.gplus:hover /* po najechaniu kursorem tło zmieni kolor */
+{
+background-color:#c84222 ;/* po odjęciu z każdej cyfry i litery o 1 zmini się barwa na ciemniejszy kolor */
+}
+
+.tw/* dolne kafelki z prawej strony */
+{
+    margin: 10px;
+    width: 105px;
+    height: 142px;/*fi - złota liczba 230:1,618 (230px:1,618 =142px*/
+    background-color: #3095d3;
+    float: left;
+}
+.tw:hover /* po najechaniu kursorem tło zmieni kolor */
+{
+background-color:#1084c2 ;/* po odjęciu z każdej cyfry i litery o 1 zmini się barwa na ciemniejszy kolor */
+}
+
+a.tilelink /*hiper łącze podłączenie do kafelka; 
+przerobienie 1 kafelka kim jestem - zamana z koloru niebieskiego na biały i usunięcie podkreślenia */
+{
+color: white; /* zmiana koloru textu */
+text-decoration: none; /* usunięcie podkreslenia textu */
+display: block;/* element blokowy ustalnie rozmiaru (przykłądowo skopiowany z taile1*/
+width: 230px; /*szerokość kafelki */
+height: 142px;/*wysokość*/
+}
+a.tilelink2 /*hiper łącze podłączenie do kafelka; 
+przerobienie pomarańczowy kafelek - zamana z koloru niebieskiego na biały i usunięcie podkreślenia */
+{
+color: white; /* zmiana koloru textu */
+text-decoration: none; /* usunięcie podkreslenia textu */
+
+}
