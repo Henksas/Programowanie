@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- Tworzenie interfejsu formularzy-->
+    <head>
+         <meta charset="utf-8">
+         <title>Katalog Samochodowy</title>
+         <meta name="description" content="Mój wymarzony samochód !!!">
+         <meta name="keywords" content="Samochód, Katalog, Salon, Nowy, Używany">
+         <meta name="author" content="Henry">
+         
+         <meta http-equiv="X-Ua-Compatible" content="IE=edge">
+
+         <link rel="stylesheet" href="main.css">
+         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp:subset=latin-ext" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+
+            <h1>Konfiguracja Samochodu !!!</h1>
+
+        </header>
+            <main>
+                <article>
+                             <!--znacznik form i jego najwarzniejsze znaczniki:
+                             1. action= który skrypt PHP ma przetworzyć dane, które przyjdą z naszego formularza ?
+                             2. method= jakiej motody HTTP użyć do przesłania danych z naszego formularza (get czy post)? 
+                             3. enctype="application/X-www-form-urlencoded" 
+                             określenie identyfikatora MIME-type zawartość przesyłanej na serwer metodą post.
+                             Wartośc domyślna, przyjmowana jeśli atrybutu nie określono w tagu <form>.
+                             Wszystkie znaki zostają zakodowane metodą urlencod - spacje zamieniają się na (+),
+                             zaś wszystkie wartości, które nie są alfanumeryczne zostaną zastąopione procentem (%),
+                             po którym pojawiają się dwie cyfry zapisane szesnastkowo, oznaczające konkretny znak.
+                             Więcej szczegółów na stronie : bit.ly/url-encode 
+                             4. encytpe="multipart/form-data" 
+                             Wartość stosowana dla plików ( gdy w formularzu znajduje się input typu file) -
+                             znaki nie zostają zakodowane w urlencode (ważne, aby plik dotarł na serwer w niezmienionej postaci)
+                             5  enctype="text/plain"
+                             Ustawienie tego MIME-type oznaczają, iż przesyłane znaki reprezentują tekst możliwy do przeczytania przez człowieka
+                             i bezpośredniego wyświetlenia przez przeglądarkę - nie ma potrzeby zakodowania znaków specjalnych w urlencode 
+                             6. przydatne linki do tematu(bit.ly/tag-form-informacje ; bit.ly/mime-media-types ; bit.ly/url-encode)  -->
+                    
+                    <form action="order.php" method="post" enctype="multipart/form-data"> 
+                             <!--order.php służy do wysałnia na serwer zamówienia do przycisku <input type="submit" value="Zamawiam!"> 
+                             enctype= określenie identyfikatora MIME-type zawartości przesąłnej na serwer metodą post
+                             multipart/form-data = dla plików - dane wejściowe nie zostaną zakodowane w urlencode (ważne jest by plik dotarł na serwer w niezminionej, oryiginalnej formie) -->
+                    
+                             <!--kontrolki i elementy interfejsu (wybór jednokrotny , jednego elementu ;
+                             1 metoda - poleradio 
+                             (każda kotrolka formularza - o ile nie jest przyciskiem - który posiada sam w sobie nazwę - powinna posiadać etykietę (ustanowioną tagiem label)-->
+                             <!-- 2 sposoby 
+                             1. z wykorzystaniem "id" <input type="radio" id="nadwozie"> <label for="nadwozie"> Hatchback </label> etykieta label dla kotrolki z "id" nadwozie
+                             2. przeniesienie input do znacznika labela <label><input type="radio">Hatchback</label> ; krótsza metoda
+                             3. uwaga - Wszystkie inputy radio , które stanowią wybór jednokrotny powinny mieć ustawiony atrybut name o takiej samej wartości , tworzy grupę jednego wyboru
+                             4. dopisanie div - spowoduje ustawienei się blokowo ; checked - domyślne zaznaczenie  pola
+                             5. fieldset - znacznik grupujący elementy interfejsu ramka do okoła (label)
+                             6. legenda
+                             7. zastosowanie PHP W CELU KTÓRE NADWOZIE WYBRAŁ INTERANAUTA USTAWIENIE "VALUE- może być to nazwa, numer"-->
+                        
+                        <div class="row"> <!--ustawienei class div do wizualizacji -->       
+                        
+                        <fieldset>
+
+                            <legend>Rodzaj nadwozia</legend>
+                            <div><label><input type="radio" value="1" name="nadwozie" checked>Hatchback</label></div>
+                            <div><label><input type="radio" value="2" name="nadwozie">Kabriolet</label></div>
+                            <div><label><input type="radio" value="3" name="nadwozie">Kombi</label></div>
+                            <div><label><input type="radio" value="4" name="nadwozie">Suv</label></div>
+
+                        </fieldset>
+                       
+                        </div>
+                             <!-- tworzenie listy  wyboru z zastosowaniem 2 rodzaju czyli znacznika for
+                             1.selected domyślne zaznaczenie pozycji
+                             2. value wybranie wartość z listy po stronie serwera  -->
+
+                        <div class="row"> 
+
+                        <label for="Silnik">Rodzaj silnika</label>
+                       
+                        <select id="Silnik" name="Silniki">
+                           
+                            <option value="W">Wysokoprężny</option>
+                            <option value="B" selected>Benzynowy</option>
+                            <option value="E">Elektryczny</option>
+                            <option value="H">Hybrydowy</option>
+                       
+                        </select>
+                        </div>
+                          <!--Wybór wielokrotny -->
+                    
+                        <div class="row">
+                            <fieldset>
+
+                                <legend>Wyposażenie samochodu</legend>
+                                     <!--"WYBÓR WIELOKROTNY Z ZASTOSOWANIU CHECKBOX"
+                                     1. ustawienie w 3 kolumnach za pomocą div class 
+                                     jeżeli dopiszemy checked do którejś pozycji będzie ona zanaczona autoamtycznie do wyboru np ABS i Nawigacja;
+                                     2. opcja disabled spowoduje całkowite zablokowanie pozycji której nie bedzie można odznaczyć są zaznaczone ale nie aktywne
+                                     3. odebranie checkbox w PHP dodanie ATRYBUTu VALUE (dla każedego checkbox inna wartość)
+                                     4. zastosowanie tablic (zamaiast neme= ; który aby w PHP uchwycić wartości można przy każdym checkbox dać inny aby każdy sprawdzać osobno)
+                                     struktura danych jest to zestaw zminnych w szufkatkach jednego zbiorczego pojemnika , zastosowanie więcej wrtości - wybór wielokrotny 
+                                     damy name="wyp[] - jako skrót wyposażenia"-->
+                               <div class="col">
+
+                                    <div><label><input type="checkbox" name="wyp[]" value="1">Klimatyzacja</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]" value="2"disabled checked>ABS</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]" value="3">ESR</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]" value="4" disabled checked>Nawigacja</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]" value="5">Podgrzewane fotele</label></div>
+
+                               </div>
+                            
+                               <div class="col">
+
+                                    <div><label><input type="checkbox" name="wyp[]" value="6">Airback</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]" value="7">Kamera cofania</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]" value="8">Elektrycze lusterka</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]" value="9">Tapicerka</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]" value="10">Zużycie paliwa</label></div>
+
+                               </div>
+                           
+                               <div class="col">  
+
+                                    <div><label><input type="checkbox" name="wyp[]" value="11">kolor</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]" value="12">Skrzynia biegów</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]"value="13">Filtr cząstek stałych</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]" value="14">Wspomaganie kierownicy</label></div>
+                                    <div><label><input type="checkbox" name="wyp[]" value="15">Koła</label></div>
+
+                               </div>
+                            
+                            </fieldset>
+                                <!--ZASTOSOWANIE WYBORU WIELOKROTNEGO - MULTPLE
+                                 1. Zamówienie choinek zapachowych
+                                 2. wstawienie multiple
+                                 3. wstawienie size - widoczność ilości wybieranych pozycji do zaznaczenia
+                                 4. div style="margin-top:10px;" zastosowanie spowoduje umieszczenie listy poniżej lebel
+                                 5. neme choinka[] będzie tablicą - wileokrotnego użytku
+                                 6. klasyczne pole  tekstowe  - input- przechowywanie jednej lini wczytanego tekstu (stylizowanie)  -->
+                        
+                            <div class="row"> 
+
+                                <label for="Choinka">Rodzaj Choinek</label>
+
+                                <div style="margin-top:10px;">
+                                    
+                                    <select id="Choinka" name="Choinka[]" multiple size="4">
+                                      
+                                        <option value="O">Orange</option>
+                                        <option value="S" selected>Sosnowa</option>
+                                        <option value="L">Lawenda</option>
+                                        <option value="C">Cytrynowa</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>                      
+                                                
+                        <div class="row">
+                             <!--przykładow rozwiązania
+                             1. zastosowanie placeholder - wartości- można tu podać np adres email lub login(jest to podpowiedziany wyszażony text który znika po napisaniu textu
+                             2. zastosowanie input type="number do wartości liczbowej
+                             3. zastosowanie submit - przycisk wysąłnia formularzu
+                             4. zastosowanie step - krok zmiany wartości -->
+                              
+                            <label> Imię <input type="text" name="Imię" placeholder="Jak masz na imię?"></label>
+                            <label> Hasło <input type="password" name="Hasło"></label>
+                            <label> Szukaj <input type="search" name="Fraza"></label>
+
+                        </div>
+                    
+                        <div class="row">
+
+                            <label> ile kluczyków ma posiadać samochód <input type="number" name="Kluczyk" step="1"></label>
+
+                        </div>
+                             <!--każda kontrolka formularza musi być wypsożona w etykietę-->
+                        <div class="row">
+                         
+                            <label>Adres e-mail<input type="email" name="adres" required></label>
+                            <label>Numer telefonu<input type="tel" name="telefon" required></label>
+                             <!--jeżeli dodamy po email multiple w oknie bedziemy mogli umięścić dodatkowe adresy<label>Adres e-mail<input type="email" mulitple></label>
+                             required - pole wymagane-->
+                        </div>
+
+                        <div class="row">
+                         
+                            <label>Data dostawy<input type="date" name="dzień" ></label>
+                             <!--<label>Data dostawy<input type="date" name="dzień"( możliwość ustawienia dat od -  do stosując - min="" max="")></label>-->
+                                
+                            <label>Preferowany czas dostawy<input type="time" name="czas" step="1" value="18:00" readonly ></label>
+                             <!--Ustawieni czasu do wyboru godziny minuty sekundy
+                             value="18:00" readonly - powoduje narzucenie  nie zmiennego czasu  -->
+                        </div>
+
+                        <div class="row">
+
+                            <div><label for="Komentarz">Uwagi do zamówienia</label></div>
+                             <!--textarea jest to pole powierzchni obszar w jakim będzie text - cols - ilość kolumn ; rows - ilość wierszy -->
+                            <textarea name="Komentarz" id="Komentarz" cols="80" rows="5"></textarea>
+                             <!--dodając np po "rows" -  maxlenght="" możemy ustawić max długośc znaków; dodają minlenght=" "ustawimy mnimalną długość znaków-->
+                        </div>
+
+                        <div class="row">
+                            <label>Prześlij zdjęcie swojęgo ostatniego samochosdu</label><input type="file" name="obraz" accept="image/x-png,image/gif,image/jpeg">
+                             <!-- aby przesłać obraz musimy do <form action="order.php" method="post"> dodać :enctype="multipart/form-data" 
+                             wynik = <form action="order.php" method="post" enctype="multipart/form-data"
+                             <label>Prześlij zdjęcie swojęgo ostatniego samochosdu</label><input type="file" name="obraz" accept="image/x-png,image/gif,image/jpeg" multiple> 
+                             dodanie multiple - powoduje dodanie kilku plików> 
+                             UWAGA:
+                             "DODANIE TEJ KONTROLKI JEST UKAZANIEM MOŻLWOŚCI OPCJI ZASTOSOWANIA, 
+                             JEST ZAGROŻENIE PRZEZ WYSŁAJĄCEGO DODANIE NIE OBRAZU NALEŻY TU ZASTOSOWAĆ DODATKOWE ZABEZPICZENIE ODCZYTU PLIKU  ZA OBRAZEM = accept - rodzaj pliku" -->
+                        </div>
+                            
+                        <div class="row"> <!--ustawienie koloru-->
+
+                            <label> Kolor lakieru <input type="color" name="Kolor" ></label>
+                             <!--<label> Kolor lakieru <input type="color" name="Kolor"  - value="#ff000" - narzucimy domyślnie kolor np czerwony></label>-->
+
+                        </div>
+
+                        <div class="row">
+
+                            <label>Stopień realizacji zamówienia</label><progress id="realizacja" max="100" value="25"></progress>
+                             <!--progres postęp procesu -->
+                        </div>
+
+                        <div class="row">
+                                
+                            <label> Stopień zatankowania samochodu</label><meter min="0" max="100" title="procent" value="70" low="20" high="70" optimum="75"></meter>
+                             <!--meter - licznik , kontrolka formularza obrazująca wartość wielkości, ale w odniesieniu do jej możliwego przedziału (zakresu zasięgu)--> 
+                             <!--wartości minimalna ; maxymalna wartość ; title - procent- zaznaczenie domyślne w procentach; low - niska wartość; hight wysoka wartość ; optimum - optymalna wartość--> 
+                           
+                        </div>
+
+                        <div class="row"> <!--kontrolka stron internetowej-->
+                                
+                            <label>Twoja strona www</label><input type="url" name="witryna">
+                                
+                        </div>
+
+                         <input type="hidden" name="token" value="wwererrtytytyty"> <!--ukryte pole , token bezpieczeństwa niewidoczny numer-->
+
+                         <input type="reset" value="Wyczyść formularz">  <!--czysczenie formularza-->
+
+                           
+                        <div class="row">
+                             <!--3 rozwiązania znaczników-->
+                         <input type="submit" value="Zamawiam!"> 
+
+                             <!--1.submit - przycisk wysłania formularza-->
+                             <!--2.<input type="button" value="Zamawiam!"> button - przycisk nie wysła formularz nie powoduje jego podsumowania-->
+                             <!--3.<button>Zamawiam!</button> spowoduje wysłąnie formularza-->
+                             <!-- a).przyciski które nie podumowują formularza to te, które posiadają ustawiony atrybut type="button"
+                             b). z różnicą do submit, z możliwością wstawienia np zdjęcia <button><img src"" alt=""<>button>
+                             c). ustawienei <button type="button>Zamawiam!</button> nie spowoduje wysłanie formularza -->
+ 
+                        </div>
+                    
+                    </form>
+
+
+                </article>
+            </main>
+
+
+    </body>
+</html>

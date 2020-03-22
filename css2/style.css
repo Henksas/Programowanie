@@ -1,0 +1,137 @@
+body
+{
+    background-color: blanchedalmond; /*kolor dla całej strony */
+    font-family: 'Lato', sans-serif; /*Zastosowanie czcionki do całości z google fonts , krój bedzie odziedziczony z sekcji vody*/
+
+}
+
+/*Stylizacja */
+#container     /*cała strona - Zewnętrzna powłoka - kontener */
+
+    /*# oznacza id, czyli unikatowy identyfikator (na stronie jest jeden elemnt o id=container
+    "." jeżeli zamiast "#" będzie z przodu kropka - oznacza klasę czyli przepis na styl jakiegoś elementu (na stronie może być wiele elemntów o podanym class)
+        zbiór cech do wielokrotnego wykorzystywania   */
+
+{
+    width: 1600px; /*szerokość */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo
+{
+    color: rgb(138, 86, 8);
+    margin-top: 20px; /*margin-top (górny) ; margin-left: (lewy) ;  margin-right: (prawy); margin-bottom: (z dołu) ; margin ( dodany margines z wszystkich 4 stron )marginesy */
+    font-size: 44px; ; /*font-size (czcionka rozmiar) - font-weight: ( grubość)font-style: (style np pochylenie) */
+    letter-spacing: 3px ; /*Spacja miedzy literami  */
+    font-weight: 900; 
+} 
+
+#menu
+{
+   background-color: #303030;
+   margin-top: 20px;
+   color: white;
+   padding:10px ; /*wypełnienei diva w środku */
+} 
+#topbar /* górna belka*/
+{
+   background-color: rgb(114, 70, 4); 
+   color: white;
+   padding: 10px;
+   margin-top: 10px;
+   margin-bottom: 25px;
+   height: 170px;
+} 
+#topbarL /* górna belka - lewa strona*/
+{
+    float: left;
+    padding:20px ;
+    width: 138px; /* width: 148px; + border-right: 2px = 150px (łatwiejsze pozycjonowanie)*/
+    text-align: center;  /* ustawienie centralne (obraz)*/
+    border-right: 2px dotted grey; /*(pionowe przerywane kropki w menu)*/
+} 
+#topbarR /* górna belka - prawa strona*/
+{
+    float: left;
+    padding: 20px;
+    width: 1350px; 
+    /* obliczenie wartości (#container = 1600px) - (#topbar pading = 10px*2) - (#topbarL =20px*2 + width: 148px +border-right: 2px dotted grey) -( #topbarR 20px*2) */
+    font-size: 18px;
+    text-align:justify ; /* wyrównanie textu text-align:: left;right;center;justify (wyjustowanie)*/
+} 
+#sidebar/* lewy kontener*/
+{
+    float: left;
+    width: 148px; /* szerokość taka sama jak  topbarL */
+    min-height: 700px;/* minimalna wyskość*/
+    padding: 20px;
+    background-color: rgb(122, 81, 4);
+    text-align: center;
+    font-size: 16px;
+    border-right: 2px dotted gray;
+} 
+#content/* prawy kontener*/
+{
+    float: left;
+    padding: 40px;
+    width: 1330px; /* wartość obliczona analogicznie jak w #topbarR ( wszystkie padingi z #sidebar +#content odjęte od całości #container = 1600px */
+    background-color: rgb(104, 72, 2);
+    min-height: 660px;
+    text-align: justify;
+}
+#footer /*stopka - */
+{
+    clear: both;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+} 
+.option /* clasa w menu*/
+{
+    float: left;
+    min-width: 50px;
+    height: 25px;
+    font-size: 20px;
+    padding: 15px;
+    border-right: 2px dotted yellow; /* left;top;right;bottom-obramowanie (pionowe przerywane kropki w menu) 2px grubość - dotted - (kropkowana)*/
+    opacity: 0,8;   /*opacity:0,8 - nieprzezroczysty w 80% (czyli przezroczysty w 20%)*/
+}
+.option:hover /*hover = określa styl elementu, gdy znajduje się na nim kursor myszy*/
+{
+    background-color: black; /*zmiana kloru na czarny po najechaniu myszą*/
+    cursor: pointer; /*zmiana kursoru (pointer - wskaźnik)*/
+}
+.optionL /* stylizacja donego lewgo kontenera*/
+{
+    font-size: 15px;
+    height: 25px;
+    padding: 5px;
+    border-bottom: 2px dotted gray;
+
+}
+.optionL:hover
+{
+    background-color: chocolate;  
+    color: white;
+    cursor: pointer;
+}  
+
+.bigtitle /* specjlana nowa clasa dla dużych tytułów */
+/*zastosowanie znacznika <span> - służy do zgrupowania elemntów do stylizowania
+ (np. teks, obrazek) zazwyczaj do przypisywania im określonego stylu css
+ nie jest elementem blokowym (chyba że użyjemy zapisu css- display:block;*/
+{
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+.dottedline /*tworzenie lini poziomej, przerywanej pomiedzy tekstami*/
+{
+height: 5px;
+margin-top: 5px;
+margin-bottom: 20px;
+border-bottom: 4px dotted gray;
+
+}

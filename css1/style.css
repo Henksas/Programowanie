@@ -1,0 +1,31 @@
+body
+{
+	background-color: gray; 
+	font-family: Verdana;
+	font-size: 20px;
+	color: white;
+}
+
+h1 /*Nagłówek*/
+{
+	font-size: 48px;
+	color: red !important;/*!important- powoduje zablokowanie tej pozycji czyli kolor czerwony będzie widoczny mimo że ważniejszy jest wpis oznakowania w html*/
+}
+
+/* Nieodwiedzony link */
+a:link
+{
+	color: yellow;
+}
+
+/* Odwiedzony link */
+a:visited
+{
+	color:yellow;
+}
+
+/* Link po najechaniu kursorem */
+a:hover
+{
+	color: red;
+}

@@ -1,0 +1,30 @@
+body
+{
+    margin: 0;
+    padding: 0px 60px;
+    background-color: #29201B;
+    color: #efefef;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+h1
+{
+    font-size: 42px;
+    font-weight: 400;
+    color: #Fa7c00;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.row
+{
+    margin: 20px 10px; /* ustawienie odległości w pionie i poziomie*/
+}
+.col
+{
+    display:inline-block;
+    margin: 0 150px;
+}
+#Komentarz /*ustawienie w komentarzu resize none powoduje zablokowanie w oknie (prawy dolny róg )możliwości powiększania lub zmniejszania okna*/
+{
+    resize: none;
+}
