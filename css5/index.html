@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Stylizowanie formularzy</title>
+	<meta name="description" content="Nauka podstawowego stylizowania elementów formularzy" />
+	<meta name="keywords" content="css, odcinek" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+</head>
+
+<body>
+
+	<div id="container">
+		<form>
+						<!--placeholder=tekst lub symbol zastepczy, tymczasowo umieszczony w polu edycyjnym
+ 						(do czasu wpisania "prawdziwej "zawartości pola-->
+
+			
+			<input type="text" placeholder="login" onfocus="this.placeholder=''" onblur="this.placeholder='login'">			
+		
+			<!--Zastosowanie tego zapisu z "JavaS"- przykład dla "loginu", można zastosować też do "hasła":
+				1.onfocus="this.placeholder=''" spowoduje po najechaniu kursorem na pole "login" napis "login" bedzie znikał
+				2.onblur="this.placeholder='login'" spowoduje po najechaniu kursorem na pole "login" napis "login" bedzie się pojawiał
+			11111 - UWAGA : PRZY ZASTOSOWANIU TEJ OPCJI MOŻNA USUNĄĆ STYLIZOWANIE W CSS
+					(stylizowanie przez zmianę koloru aktywne nie aktywne w różnych przeglądarkach) 
+					PONIEWAŻ BĘDZIE JUŻ NIEWIDOCZNA -->
+			
+			<!--<br /><br /> w tym miejsu zastosowanie spowoduje równe odległości pomiędzy login - hasło-->
+			
+			
+			<input type="password"placeholder="hasło">
+			
+			<!--<br /><br /> w tym miejsu zastosowanie spowoduje równe odległości pomiędzy hasło - zaloguj się
+			uwaga: aby spełniało warunek otwarzania w różnych przeglądarkach to samo zadanie lepiej ustawić te odległości z css 
+			przy zastosowaniu margin-top np: 10px w input[type=text]:focus,input[type=password]:focus-->
+			
+			<input type="submit"value="Zaloguj się">
+			
+		</form>
+	</div>
+	
+</body>
+</html>
